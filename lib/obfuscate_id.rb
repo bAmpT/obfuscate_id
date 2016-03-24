@@ -55,6 +55,10 @@ module ObfuscateId
     def to_param
       ObfuscateId.hide(self.id, self.class.obfuscate_id_spin)
     end
+    
+    def oid
+      ObfuscateId.hide(self.id, self.class.obfuscate_id_spin)
+    end
 
     # Override ActiveRecord::Persistence#reload
     # passing in an options flag with { no_obfuscated_id: true }
